@@ -16,5 +16,3 @@ Then run the script with
 chmod +x check.sh
 ./check.sh
 ```
-
-This will be updated to include whether your cpu is vulnerable after the kernel has been patched.
