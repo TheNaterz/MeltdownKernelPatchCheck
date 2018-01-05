@@ -15,3 +15,11 @@ if [[ -z "$res" ]]; then
 fi
 
 echo "Kernel is patched :)"
+
+res="$(cat /proc/cpuinfo | grep bug | uniq | grep cpu_insecure)"
+if [[ -z "$res" ]]; then
+  echo "Good news! Your CPU is not vulnerable to Meltdown! :D"
+  exit 0
+fi
+
+echo "Your CPU is vulnerable :( But at least you have the patch! :D"
